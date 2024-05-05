@@ -1,5 +1,5 @@
 package chapter15.customgeneric;
-
+//p562自定义泛型接口
 public class CustomInterfaceGeneric {
 
 }

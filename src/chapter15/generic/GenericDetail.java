@@ -2,15 +2,13 @@ package chapter15.generic;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+p558 泛型使用的注意事项和细节
+ */
 /**
  * @author 韩顺平
  * @version 1.0
  */
-/*
-泛型使用的注意事项和细节
- */
-@SuppressWarnings({"all"})
 public class GenericDetail {
     public static void main(String[] args) {
         //1.给泛型指向数据类型是，要求是引用类型，不能是基本数据类型

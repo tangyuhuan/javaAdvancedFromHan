@@ -21,7 +21,7 @@ public class Generic02 {
         arrayList.add(new Dog("发财", 1));
         arrayList.add(new Dog("小黄", 5));
         //假如我们的程序员，不小心，添加了一只猫
-        //arrayList.add(new Cat("招财猫", 8));//2. 如果编译器发现添加的类型，不满足要求，就会报错
+//        arrayList.add(new Cat("招财猫", 8));//2. 如果编译器发现添加的类型，不满足要求，就会报错
         System.out.println("===使用泛型====");
         for (Dog dog : arrayList) {
             System.out.println(dog.getName() + "-" + dog.getAge());

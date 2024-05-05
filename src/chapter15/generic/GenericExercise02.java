@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+//p560泛型课堂练习
 /**
  * @author 韩顺平
  * @version 1.0

@@ -2,14 +2,13 @@ package chapter15.generic;
 
 import java.util.*;
 
+/*p557泛型使用举例
+再次体会：泛型E具体的数据类型在定义Person对象的时候指定,即在编译期间，就确定E是什么类型
+* */
 /**
  * @author 韩顺平
  * @version 1.0
  */
-/*泛型使用举例
-再次体会：泛型E具体的数据类型在定义Person对象的时候指定,即在编译期间，就确定E是什么类型
-* */
-@SuppressWarnings({"all"})
 public class GenericExercise {
     public static void main(String[] args) {
         //使用泛型方式给HashSet 放入3个学生对象

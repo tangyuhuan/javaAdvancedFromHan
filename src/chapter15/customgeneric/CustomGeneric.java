@@ -2,6 +2,7 @@ package chapter15.customgeneric;
 
 import java.util.Arrays;
 
+//p561自定义泛型类Tiger
 public class CustomGeneric {
     public static void main(String[] args) {
         Tiger<Double,String,Integer> g = new Tiger<>("John");
@@ -13,7 +14,7 @@ public class CustomGeneric {
         System.out.println(g2);
     }
 }
-    //老韩解读
+//老韩解读
 //1. Tiger 后面泛型，所以我们把 Tiger 就称为自定义泛型类
 //2, T, R, M 泛型的标识符, 一般是单个大写字母
 //3. 泛型标识符可以有多个.
