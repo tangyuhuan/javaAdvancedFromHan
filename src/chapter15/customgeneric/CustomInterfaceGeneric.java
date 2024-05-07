@@ -52,8 +52,8 @@ class BB implements IUsb<Float,Double> {
     }
 
 }
-//没有指定类型，默认为Object
-//建议直接写成 IUsb<Object,Object>
+//3.没有指定类型，默认为Object
+//这种写法不规范哦，不建议。建议直接写成 IUsb<Object,Object>
 class CC implements IUsb {//等价 class CC implements IUsb<Object,Object>
     @Override
     public Object get(Object o) {
@@ -71,9 +71,13 @@ class CC implements IUsb {//等价 class CC implements IUsb<Object,Object>
     }
 
 }
+//如果静态方法和静态属性使用了泛型，JVM就无法完成初始化(M只是一个标识，JVM还不知道具体是什么类型)
+//具体的类型要对象创建时才知道
+//而静态是和类相关的，在类加载时，对象还没有创建
+
 /*
  *  泛型接口使用的说明
- *  1. 接口中，静态成员也不能使用泛型，因为是静态成员
+ *  1. 接口中，静态成员也不能使用泛型，因为是静态成员（静态是和类相关的，类加载早于对象的创建，而泛型的具体类型要对象创建时才知道）
  *  2. 泛型接口的类型, 在继承接口或者实现接口时确定
  *  3. 没有指定类型，默认为Object
  */

@@ -20,7 +20,7 @@ public class CustomGeneric {
 //3. 泛型标识符可以有多个.
 //4. 普通成员可以使用泛型 (属性、方法)
 //5. 使用泛型的数组，不能初始化
-//6. 静态方法中不能使用类的泛型
+//6. 静态方法中不能使用类的泛型、静态属性也不能用泛型
     class Tiger<T, R, M> {//泛型标识符可以有多个.
         String name;
         T t;
@@ -34,7 +34,7 @@ public class CustomGeneric {
             this.name = name;
         }
 
-        public Tiger(String name, T t, R r, M m) {
+        public Tiger(String name, T t, R r, M m) {//构造器使用泛型
             this.name = name;
             this.t = t;
             this.r = r;
@@ -63,11 +63,11 @@ public class CustomGeneric {
 
         public void setR(R r) {//方法使用到泛型
             this.r = r;
-        }
+        }//方法使用到泛型
 
         public M getM() {//返回类型可以使用泛型.
             return m;
-        }
+        }//返回类型可以使用泛型.
 
         public void setM(M m) {
             this.m = m;
