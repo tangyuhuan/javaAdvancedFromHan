@@ -12,10 +12,12 @@ public class Homework04 {
             System.out.println("A");
         } catch (Exception e) {
             System.out.println("B");
+            return; //如果此处有return，执行完finally内容再回去执行catch中的return，D不会打印
         } finally {
             System.out.println("C");
+            return;
         }
-        System.out.println("D");
+//        System.out.println("D");
     }
 
     public static void showExce() throws Exception {
