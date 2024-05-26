@@ -18,7 +18,7 @@ import java.util.Scanner;
 2. 希望使用到 StringBuffer的 insert ，需要将 String 转成 StringBuffer
 3. 然后使用相关方法进行字符串的处理
  */
-//老韩实现，用了两个新方法，代码更短
+//老韩实现
 public class StringBufferExercise02 {
     public static void main(String[] args) {
         String price = "812356459.44";
