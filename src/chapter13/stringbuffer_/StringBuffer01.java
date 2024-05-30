@@ -16,7 +16,7 @@ public class StringBuffer01 {
         //5. 因为StringBuffer 字符内容是存在 char[] value, 所有在变化(增加/删除)
         //   不用每次都更换地址(即不是每次创建新对象)， 所以效率高于 String
 
-        StringBuffer stringBuffer = new StringBuffer("hello");
+        StringBuffer stringBuffer = new StringBuffer();
 
     }
 }
