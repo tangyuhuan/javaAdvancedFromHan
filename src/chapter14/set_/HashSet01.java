@@ -4,7 +4,7 @@ package chapter14.set_;
 
 import java.util.HashSet;
 
-/**
+/**p518 Set接口和常用方法 ！！重复练习
  * @author 韩顺平
  * @version 1.0
  */
@@ -25,12 +25,12 @@ public class HashSet01 {
 
 
         set.remove("john");
-        System.out.println("set=" + set);//3个
+        System.out.println("set=" + set);//3个，顺序不保证等于添加的顺序
 
         //
         set  = new HashSet();
         System.out.println("set=" + set);//0
-        //4 Hashset 不能添加相同的元素/数据?
+        //4 Hashset 不能添加相同的元素/数据
         set.add("lucy");//添加成功
         set.add("lucy");//加入不了
         set.add(new Dog("tom"));//OK

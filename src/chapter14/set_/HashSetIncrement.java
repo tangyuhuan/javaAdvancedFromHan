@@ -3,7 +3,7 @@ package chapter14.set_;
 import java.util.HashSet;
 import java.util.Objects;
 
-/**
+/**p524、525 HashSet源码解读3
  * @author 韩顺平
  * @version 1.0
  */
@@ -23,18 +23,18 @@ public class HashSetIncrement {
 //        }
         /*
         在Java8中, 如果一条链表的元素个数到达 TREEIFY_THRESHOLD(默认是 8 )，
-        并且table的大小 >= MIN_TREEIFY_CAPACITY(默认64),就会进行树化(红黑树),
+        并且table的大小 >= MIN_TREEIFY_CAPACITY(默认64),就会进行树化(红黑树),debug进入可以看到类型变成HashMap$TreeNode
         否则仍然采用数组扩容机制
 
          */
-
+        //让A对象所有的hashCode一样，但是equals不同，就可以在同一条链上了
 //        for(int i = 1; i <= 12; i++) {
 //            hashSet.add(new A(i));//
 //        }
 
 
         /*
-            当我们向hashset增加一个元素，-> Node -> 加入table , 就算是增加了一个size++
+            当我们向hashset增加一个元素，-> 相当于将一个Node -> 加入table , 就算是增加了一个size++
 
          */
 
@@ -69,6 +69,7 @@ class A {
     public A(int n) {
         this.n = n;
     }
+
     @Override
     public int hashCode() {
         return 100;

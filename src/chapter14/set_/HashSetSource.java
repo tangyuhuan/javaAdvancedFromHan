@@ -2,14 +2,14 @@ package chapter14.set_;
 
 import java.util.HashSet;
 
-/**
+/**p522 HashSet源码解读 ！！重要，重复理解
  * @author 韩顺平
  * @version 1.0
  */
 @SuppressWarnings({"all"})
 public class HashSetSource {
     public static void main(String[] args) {
-
+        //
         HashSet hashSet = new HashSet();
         hashSet.add("java");//到此位置，第1次add分析完毕.
         hashSet.add("php");//到此位置，第2次add分析完毕

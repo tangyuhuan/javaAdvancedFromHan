@@ -3,7 +3,7 @@ package chapter14.set_;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
+/**p518 Set接口和常用方法
  * @author 韩顺平
  * @version 1.0
  */

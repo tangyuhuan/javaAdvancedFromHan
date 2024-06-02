@@ -1,6 +1,6 @@
 package chapter14.set_;
 
-/**
+/**p520 数组链表模拟
  * @author 韩顺平
  * @version 1.0
  */
@@ -8,10 +8,9 @@ package chapter14.set_;
 public class HashSetStructure {
     public static void main(String[] args) {
         //模拟一个HashSet的底层 (HashMap 的底层结构)
-
         //1. 创建一个数组，数组的类型是 Node[]
         //2. 有些人，直接把 Node[] 数组称为 表
-        Node[] table = new Node[16];
+        Node[] table = new Node[16];//得到长度为16的数组，每一项都是null
 
         //3. 创建结点
         Node john = new Node("john", null);
