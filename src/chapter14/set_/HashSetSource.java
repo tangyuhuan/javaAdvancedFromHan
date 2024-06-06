@@ -45,7 +45,8 @@ public class HashSetSource {
                 //(2)判断p 是否为null
                 //(2.1) 如果p 为null, 表示还没有存放元素, 就创建一个Node (key="java",value=PRESENT)
                 //(2.2) 就放在该位置 tab[i] = newNode(hash, key, value, null)
-
+               // 计算key对应的hash值，应该在table表的哪一个索引位置存放（计算下标 index =( n-1 & hash)，判断该位置元素是否存在）
+                // 并且将该位置的变量值赋给辅助变量p，
                 if ((p = tab[i = (n - 1) & hash]) == null)
                     tab[i] = newNode(hash, key, value, null);
                 else {

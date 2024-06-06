@@ -3,7 +3,7 @@ package chapter14.set_;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-/**
+/**p529 LinkedHashSet源码解读
  * @author 韩顺平
  * @version 1.0
  */
@@ -23,11 +23,11 @@ public class LinkedHashSetSource {
         //老韩解读
         //1. LinkedHashSet 加入顺序和取出元素/数据的顺序一致
         //2. LinkedHashSet 底层维护的是一个LinkedHashMap(是HashMap的子类)
-        //3. LinkedHashSet 底层结构 (数组table+双向链表)
+        //3. LinkedHashMap 底层结构 (数组table+双向链表)
         //4. 添加第一次时，直接将 数组table 扩容到 16 ,存放的结点类型是 LinkedHashMap$Entry
-        //5. 数组是 HashMap$Node[] 存放的元素/数据是 LinkedHashMap$Entry类型
+        //5. 数组是 HashMap$Node[] 存放的元素/数据是 LinkedHashMap$Entry类型  （数组多态：子类对象存放到父类类型数组中）
         /*
-                //继承关系是在内部类完成.
+                //继承关系是在内部类完成.   （HashMap.Node是静态内部类，通过类名调用，仅供HashMap内部使用）
                 static class Entry<K,V> extends HashMap.Node<K,V> {
                     Entry<K,V> before, after;
                     Entry(int hash, K key, V value, Node<K,V> next) {
