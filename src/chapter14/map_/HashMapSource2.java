@@ -13,6 +13,7 @@ public class HashMapSource2 {
 
 
         HashMap hashMap = new HashMap();
+        hashMap.put(null,null);
         for(int i = 1; i <= 12; i++) {
             hashMap.put(i, "hello");
 //            hashMap.put(new A(i),"hello");

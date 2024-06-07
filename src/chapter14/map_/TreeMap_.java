@@ -3,7 +3,7 @@ package chapter14.map_;
 import java.util.Comparator;
 import java.util.TreeMap;
 
-/**
+/**p545 TreeMap源码解读
  * @author 韩顺平
  * @version 1.0
  */
@@ -20,8 +20,8 @@ public class TreeMap_ {
             @Override
             public int compare(Object o1, Object o2) {
                 //按照传入的 k(String) 的大小进行排序
+//                return ((String) o2).compareTo((String) o1);
                 //按照K(String) 的长度大小排序
-                //return ((String) o2).compareTo((String) o1);
                 return ((String) o2).length() - ((String) o1).length();
             }
         });
@@ -61,8 +61,13 @@ public class TreeMap_ {
                         t = t.left;
                     else if (cmp > 0)
                         t = t.right;
-                    else  //如果遍历过程中，发现准备添加Key 和当前已有的Key 相等，就不添加
-                        return t.setValue(value);
+                    else {//如果遍历过程中，发现准备添加Key 和当前已有的Key 相等，就不添加
+                    V oldValue = t.value;
+                    if (replaceOld || oldValue == null) {
+                        t.value = value;
+                    }
+                    return oldValue;
+                }
                 } while (t != null);
             }
          */
