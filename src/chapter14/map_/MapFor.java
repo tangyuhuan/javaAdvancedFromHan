@@ -1,6 +1,7 @@
 package chapter14.map_;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**p534 Map六大遍历方式
  * @author 韩顺平
@@ -70,7 +71,7 @@ public class MapFor {
             Map.Entry m = (Map.Entry) entry;
             System.out.println(m.getKey() + "-" + m.getValue());
         }
-
-
+        ConcurrentHashMap
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
     }
 }

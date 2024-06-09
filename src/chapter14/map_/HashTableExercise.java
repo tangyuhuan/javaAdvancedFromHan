@@ -11,7 +11,7 @@ public class HashTableExercise {
     public static void main(String[] args) {
         Hashtable table = new Hashtable();//ok
         table.put("john", 100); //ok
-        //table.put(null, 100); //Hashtable的k和v都不能为null，否则会抛出NullPointerException
+        table.put(null, 100); //Hashtable的k和v都不能为null，否则会抛出NullPointerException
         //table.put("john", null);//异常 NullPointerException
         table.put("lucy", 100);//ok
         table.put("lic", 100);//ok
