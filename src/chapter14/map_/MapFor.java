@@ -71,7 +71,6 @@ public class MapFor {
             Map.Entry m = (Map.Entry) entry;
             System.out.println(m.getKey() + "-" + m.getValue());
         }
-        ConcurrentHashMap
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
     }
 }
