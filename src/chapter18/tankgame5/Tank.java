@@ -1,4 +1,4 @@
-package chapter18.tankgame4;
+package chapter18.tankgame5;
 
 /**
  * @author tyh
@@ -9,6 +9,7 @@ public class Tank {
     private int y;//坦克的纵坐标
     private int direct = 0;//坦克方向 0 上1 右 2下 3左
     private int speed = 1;
+    boolean isLive = true;
     public Tank(int x, int y) {
         this.x = x;
         this.y = y;
