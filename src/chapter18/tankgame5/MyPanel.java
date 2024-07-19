@@ -66,7 +66,6 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
         g.setColor(Color.black);
         g.fillRect(0, 0, 1000, 750);//填充矩形给一个黑色的背景
         //画出自己的坦克--封装方法
-        System.out.println("hero.isLive"+hero.isLive);
         if(hero!=null && hero.isLive){
             drawTank(hero.getX(),hero.getY(),g,hero.getDirect(),1);//此处体会面向对象的思想
         }

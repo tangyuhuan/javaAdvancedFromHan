@@ -11,11 +11,15 @@ public class Hero extends Tank {
     //定义一个Shot对象，表示一个射击（线程）
     Vector<Shot> shots = new Vector<>();
     Shot shot = null;
+    //如果子类和父类中出现同名的成员变量时，尽管同名，但他们是两个完全无关的变量，在子类中访问的是定义在子类中的变量，在父类中访问的是定义在父类中的变量
+    //可以看Cat的例子
+//    boolean isLive = true;
     public Hero(int x, int y) {
         super(x, y);
     }
     //射击
     public void fireBullet() {
+        System.out.println("this.isLive"+super.isLive);
         //控制最多5颗子弹
         if(shots.size() == 5) {
             return;

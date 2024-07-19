@@ -1,6 +1,6 @@
 package chapter17.syn;
 
-/**p594、595 线程同步机制、互斥锁
+/**p594、595 线程同步机制、互斥锁！！重要
  * @author tyh
  * @version 1.0
  * 通过同步机制，解决票数超卖（注意多个线程必须是同一个对象的：一个对象放到三个线程里面，三个线程操作的是同一个对象）
@@ -88,11 +88,10 @@ class SellTicket03 implements Runnable{
         }
     }
 
-    //同步方法：同一时刻，只能有一个线程来执行sell办法，要执行先得持有锁
+    //同步方法（非静态的）的锁可以是this，也可以是其他对象（要求是同一个对象）：同一时刻，只能有一个线程来执行sell办法，要执行先得持有锁
     //老韩说明
-    //1. public synchronized void sell() {} 就是一个同步方法
-    //2. 这时锁在 this对象
-    //3. 也可以在代码块上写 synchronize ,同步代码块, 互斥锁还是在this对象
+    //1. 方法加锁，同步方法：public synchronized void sell() {} 就是一个同步方法，这时锁在 this对象
+    //2. 也可以代码块加锁，同步代码块， 互斥锁还是在this对象
     public /*synchronized*/ void sell(){
         synchronized(/*this*/object){ //如果synchronized(new Object())就不能满足多个线程的锁对象是同一个
             if(ticketNum <= 0){

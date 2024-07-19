@@ -42,7 +42,7 @@ class Outer04 { //外部类
                 System.out.println("老虎叫唤...");
             }
         };
-        System.out.println("tiger的运行类型=" + tiger.getClass());
+        System.out.println("tiger的运行类型=" + tiger.getClass()); //Outer04$1
         tiger.cry();
         tiger.cry();
         tiger.cry();
